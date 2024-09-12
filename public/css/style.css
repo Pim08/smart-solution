@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main{
+    background-color: rgb(255, 238, 0);
+    text-align: center;
+    padding: 100px;
+}
+p{
+    color: rgb(0, 0, 0);
+}
+header{
+    background-color: rgb(48, 1, 255);
+    border: double rgb(255, 255, 255) 3px;
+    text-align: center;
+    padding: 40px;
+}
+
+a{
+    background-color: rgb(251, 255, 0);
+    color: rgb(21, 4, 255);
+    border: goldenrod solid 1px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer{
+    background-color: rgb(4, 0, 255);
+    color: rgb(251, 255, 0);
+    border: goldenrod solid 1px;
+    text-decoration: none;
+    padding: 10px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 3s ease-in-out;
+}
+@keyframes rotateFadeIn {
+    from {
+        opacity: 0;
+        transform: rotate(0deg) translateY(30px); /* Begin met geen rotatie en verplaatsing */
+    }
+    to {
+        opacity: 1;
+        transform: rotate(360deg) translateY(0); /* Eindig met volledige rotatie en geen verplaatsing */
+    }
+}
+.fade-in-rotate {
+    opacity: 0; /* Zorg ervoor dat het element onzichtbaar is bij de start */
+    animation: rotateFadeIn 1.5s ease-in-out; /* Pas de duur en timing aan naar wens */
+    animation-fill-mode: forwards; /* Houdt de laatste status na de animatie */
+}
+
+h3{
+    color: yellow;
+    text-align: center;
+}
+@keyframes specialIntro {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.5); /* Begin met geen zichtbaarheid, geen rotatie en halve grootte */
+        color: #ff0000; /* Begin met een rode kleur */
+    }
+    50% {
+        opacity: 0.5;
+        transform: rotate(180deg) scale(1.2); /* Halverwege de animatie: rotatie van 180 graden en vergroting */
+        color: #00ff00; /* Halverwege de animatie: groene kleur */
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg) scale(1); /* Eindig met volledige rotatie en normale grootte */
+        color: #0000ff; /* Eindig met een blauwe kleur */
+    }
+}
+
+.special-intro {
+    animation: specialIntro 3s ease-in-out; /* Duur en timing aanpassen naar wens */
+    animation-fill-mode: forwards; /* Houdt de laatste status na de animatie */
+}
